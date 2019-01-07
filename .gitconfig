@@ -9,19 +9,10 @@
 	repo = town repo
 	ship = town ship
 	sync = town sync
-[user]
-	name = Kel Byers
-	email = kel_byers@homedepot.com
 [core]
-	excludesfile = /Users/jxb2016/.gitignore_global
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
-	path = -ro
-[mergetool "sourcetree"]
-	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
-	trustExitCode = true
+	excludesfile = ~/.gitignore_global
 [commit]
-	template = /Users/jxb2016/.stCommitMsg
+	template = ~/.stCommitMsg
 [git-town]
 	new-branch-push-flag = true
 [diff]
@@ -30,3 +21,6 @@
 	tool = bc3
 [mergetool "bc3"]
 	trustExitCode = true
+[include]
+	path = .gitconfig.user
+	path = .gitconfig.local
