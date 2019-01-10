@@ -29,11 +29,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/bundler
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/osx
-    zgen load denysdovhan/spaceship-prompt spaceship
     zgen oh-my-zsh plugins/golang
     zgen oh-my-zsh plugins/helm
     zgen oh-my-zsh plugins/kubectl
 
+    zgen load denysdovhan/spaceship-prompt spaceship
+    zgen load dannyzen/cf-zsh-autocomplete-plugin
     zgen load unixorn/autoupdate-zgen
     zgen load zsh-users/zsh-completions
 
