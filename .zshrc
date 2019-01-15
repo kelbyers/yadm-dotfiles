@@ -25,22 +25,23 @@ PATH=/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin
 
 # Conditional PATH additions
 for path_candidate in /opt/local/sbin \
-  /Applications/Xcode.app/Contents/Developer/usr/bin \
-  /opt/local/bin \
-  /opt/puppetlabs/pdk/bin \
-  /opt/X11/bin \
-  ~/.rbenv/bin \
-  ~/bin \
-  ~/src/gocode/bin
+    /Applications/Xcode.app/Contents/Developer/usr/bin \
+    /opt/local/bin \
+    /opt/puppetlabs/pdk/bin \
+    /opt/X11/bin \
+    ~/.rbenv/bin \
+    ~/bin \
+    ~/src/gocode/bin
 do
-  if [ -d ${path_candidate} ]; then
-    export PATH=${PATH}:${path_candidate}
-  fi
+    if [ -d ${path_candidate} ]; then
+      export PATH=${PATH}:${path_candidate}
+    fi
 done
 
 ##############################################################################
 # zgen
 ##############################################################################
+ZGEN_AUTOUPDATE_VERBOSE=1   # display a handy message when autoupdate runs!
 if [ -f ~/.zgen-setup ]; then
     source ~/.zgen-setup
 fi
