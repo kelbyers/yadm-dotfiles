@@ -58,6 +58,9 @@ alias pdk='nocorrect pdk'
 [[ -r $HOME/.profile.d/location_aliases_current.zsh ]] && source $HOME/.profile.d/location_aliases_current.zsh
 
 export GIT_PAGER="less -RFX"
+# spaceship prompt handles pyenv virtualenv prompts
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_ROOT=/usr/local/var/pyenv
 
 if which pyenv > /dev/null; then eval "$(pyenv init - zsh)"; alias pyenv='nocorrect pyenv'; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init - zsh)"; fi
@@ -65,10 +68,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; alias rbenv='nocorr
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# spaceship prompt handles pyenv virtualenv prompts
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT=/usr/local/var/pyenv
 
 # postgresql
 export PGDATABASE=postgres
@@ -82,7 +81,7 @@ function k_prompt {
 }
 
 __KUBECONFIGS=( $HOME/.kube/config $(print $HOME/.kube/*.config) )
-if (( ${#__KUBECONFIGS} > 0 )); then 
+if (( ${#__KUBECONFIGS} > 0 )); then
     export KUBECONFIG=${(j/:/)__KUBECONFIGS}
 fi
 unset __KUBECONFIGS
