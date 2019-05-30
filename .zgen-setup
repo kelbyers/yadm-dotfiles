@@ -12,10 +12,6 @@ if ! zgen saved; then
     # https://github.com/tarjoilija/zgen/issues/74
     export ZGEN_PREZTO_LOAD_DEFAULT=0
 
-    # zgen takes care of updating all my plugins, I don't need
-    # OMZ to do it, too!
-    export DISABLE_AUTO_UPDATE="true"
-    # ^^^ no OMZ auto update!
     zgen oh-my-zsh
     # zgen oh-my-zsh plugins/compleat
     zgen oh-my-zsh plugins/git
@@ -36,9 +32,9 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/golang
     zgen oh-my-zsh plugins/helm
     zgen oh-my-zsh plugins/kubectl
-    # vvv no OMZ auto update!
-    unset DISABLE_AUTO_UPDATE
-    # ^^^ no OMZ auto update!
+
+	# Disable oh-my-zsh's automatic updates; we'll use "zgen update" instead.
+    echo "LAST_EPOCH=9999999" > "$HOME/.zsh-update"
 
     zgen load denysdovhan/spaceship-prompt spaceship
     zgen load dannyzen/cf-zsh-autocomplete-plugin
