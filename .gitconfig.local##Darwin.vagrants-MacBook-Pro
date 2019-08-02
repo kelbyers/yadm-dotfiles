@@ -1,0 +1,5 @@
+[credential]
+	helper = osxkeychain
+[user]
+	name = Kel Byers
+	email = kel_byers@homedepot.com

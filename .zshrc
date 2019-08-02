@@ -97,3 +97,5 @@ if command -v pimssh > /dev/null; then
 fi
 
 command -v direnv > /dev/null && eval "$(direnv hook zsh)"
+
+[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local

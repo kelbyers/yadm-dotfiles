@@ -1,0 +1,2 @@
+echo "Unlock keychain?"
+security unlock-keychain login.keychain
