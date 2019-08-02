@@ -1,3 +1,6 @@
 [submodule "/Users/jxb2016/.zgen"]
 	path = /Users/jxb2016/.zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule ".zgen"]
+	path = .zgen
+	url = https://github.com/tarjoilija/zgen.git
