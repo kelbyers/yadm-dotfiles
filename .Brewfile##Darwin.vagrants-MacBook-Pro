@@ -1,0 +1,8 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "coreutils"
+brew "direnv"
+brew "git"
+brew "go"
+brew "wget"
+brew "yadm"
