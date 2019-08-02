@@ -11,6 +11,8 @@ export SPACESHIP_HOST_SHOW=always
 
 export ZSH_CACHE_DIR="$HOME/.cache"
 
+[[ ! -d ${ZSH_CACHE_DIR} ]] && mkdir -p ${ZSH_CACHE_DIR}
+
 # Correct spelling for commands
 setopt correct
 
@@ -80,14 +82,18 @@ function k_prompt {
     SPACESHIP_KUBECONTEXT_SHOW=true
 }
 
-__KUBECONFIGS=( $HOME/.kube/config $(print $HOME/.kube/*.config) )
-if (( ${#__KUBECONFIGS} > 0 )); then
-    export KUBECONFIG=${(j/:/)__KUBECONFIGS}
+if [[ -d $HOME/.kube && -f $HOME/.kube/config ]]; then
+    __KUBECONFIGS=( $HOME/.kube/config $(print $HOME/.kube/*.config) )
+    if (( ${#__KUBECONFIGS} > 0 )); then
+        export KUBECONFIG=${(j/:/)__KUBECONFIGS}
+    fi
+    unset __KUBECONFIGS
 fi
-unset __KUBECONFIGS
 
 # Pimssh
-alias pimpr="pimssh -p -A"
-alias pimnp="pimssh -n"
+if command -v pimssh > /dev/null; then
+    alias pimpr="pimssh -p -A"
+    alias pimnp="pimssh -n"
+fi
 
-eval "$(direnv hook zsh)"
+command -v direnv > /dev/null && eval "$(direnv hook zsh)"
