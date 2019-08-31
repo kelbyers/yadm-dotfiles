@@ -15,12 +15,8 @@
 	template = ~/.stCommitMsg
 [git-town]
 	new-branch-push-flag = true
-[diff]
-	tool = bc3
-[merge]
-	tool = bc3
-[mergetool "bc3"]
-	trustExitCode = true
 [include]
 	path = .gitconfig.user
 	path = .gitconfig.local
+[bulkworkspaces]
+	dojo = /Users/jxb2016/git/aether-foundation/dojo/src

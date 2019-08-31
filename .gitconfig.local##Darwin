@@ -5,5 +5,11 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	trustExitCode = true
 [credential]
 	helper = osxkeychain
