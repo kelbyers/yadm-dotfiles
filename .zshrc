@@ -64,12 +64,22 @@ export GIT_PAGER="less -RFX"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PYENV_ROOT=/usr/local/var/pyenv
 
-if which pyenv > /dev/null; then eval "$(pyenv init - zsh)"; alias pyenv='nocorrect pyenv'; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init - zsh)"; fi
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; alias rbenv='nocorrect rbenv'; fi
+if which pyenv > /dev/null; then
+    eval "$(pyenv init - zsh)"; alias pyenv='nocorrect pyenv'; fi
+if which pyenv-virtualenv-init > /dev/null; then
+    eval "$(pyenv virtualenv-init - zsh)"; fi
+if which rbenv > /dev/null; then
+    eval "$(rbenv init - zsh)"
+    alias rbenv='nocorrect rbenv';
+fi
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+if which goenv > /dev/null; then
+    eval "$(goenv init -)"
+    alias goenv="nocorrect goenv"
+fi
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" &&
+    source "${HOME}/.iterm2_shell_integration.zsh"
 
 # postgresql
 export PGDATABASE=postgres
