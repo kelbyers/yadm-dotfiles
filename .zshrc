@@ -53,30 +53,12 @@ fi
 # which finds all items in subdirectories except for the `vendor/` directory
 setopt EXTENDED_GLOB
 
-alias tox='nocorrect tox'
-alias pdk='nocorrect pdk'
-
-# load location aliases
-[[ -r $HOME/.profile.d/location_aliases_current.zsh ]] && source $HOME/.profile.d/location_aliases_current.zsh
-
 export GIT_PAGER="less -RFX"
-# spaceship prompt handles pyenv virtualenv prompts
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PYENV_ROOT=/usr/local/var/pyenv
 
-if which pyenv > /dev/null; then
-    eval "$(pyenv init - zsh)"; alias pyenv='nocorrect pyenv'; fi
-if which pyenv-virtualenv-init > /dev/null; then
-    eval "$(pyenv virtualenv-init - zsh)"; fi
-if which rbenv > /dev/null; then
-    eval "$(rbenv init - zsh)"
-    alias rbenv='nocorrect rbenv';
-fi
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
-if which goenv > /dev/null; then
-    eval "$(goenv init -)"
-    alias goenv="nocorrect goenv"
-fi
+[[ -d ~/.profile.d ]] && for __E in ~/.profile.d/*.(zsh|sh); do
+    source $__E
+done
+unset __E
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" &&
     source "${HOME}/.iterm2_shell_integration.zsh"
@@ -99,13 +81,5 @@ if [[ -d $HOME/.kube && -f $HOME/.kube/config ]]; then
     fi
     unset __KUBECONFIGS
 fi
-
-# Pimssh
-if command -v pimssh > /dev/null; then
-    alias pimpr="pimssh -p -A"
-    alias pimnp="pimssh -n"
-fi
-
-command -v direnv > /dev/null && eval "$(direnv hook zsh)"
 
 [[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local

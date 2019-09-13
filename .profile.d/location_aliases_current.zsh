@@ -1,0 +1,1 @@
+/Users/jxb2016/.profile.d/locations/location_aliases_non_thd.zsh

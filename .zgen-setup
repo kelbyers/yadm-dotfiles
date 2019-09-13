@@ -1,6 +1,23 @@
 # vim:ft=shellscript
 # load zgen
+
+# disable annoying oh-my-zsh update prompt
+# https://stackoverflow.com/a/25876379
+# Set environment variable DISABLE_UPDATE_PROMPT=true to always reply Yes and automatically upgrade.
+#
+# Set environment variable DISABLE_AUTO_UPDATE=true to always reply No and never upgrade.
+#
+# Simply add one of these in your ~/.zshrc somewhere before calling source $ZSH/oh-my-zsh.sh
+DISABLE_AUTO_UPDATE=true
 source "${HOME}/.zgen/zgen.zsh"
+
+### The below does not seem to work. It was originally elsewhere in the file.
+### Not sure if moving it here would have resolved it or not, but I am trying
+### to resolve it by setting DISABLE_AUTO_UPDATE above loading zgen
+### vvv
+### # Disable oh-my-zsh's automatic updates; we'll use "zgen update" instead.
+### echo "LAST_EPOCH=9999999" > "$HOME/.zsh-update"
+### ^^^ disabled for now
 
 # if the init scipt doesn't exist
 if ! zgen saved; then
@@ -32,9 +49,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/golang
     zgen oh-my-zsh plugins/helm
     zgen oh-my-zsh plugins/kubectl
-
-	# Disable oh-my-zsh's automatic updates; we'll use "zgen update" instead.
-    echo "LAST_EPOCH=9999999" > "$HOME/.zsh-update"
 
     zgen load denysdovhan/spaceship-prompt spaceship
     zgen load dannyzen/cf-zsh-autocomplete-plugin

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+exec 2>&1
+
+ln -sf $HOME/.profile.d/locations/location_aliases_non_thd.zsh \
+    $HOME/.profile.d/location_aliases_current.zsh

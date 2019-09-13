@@ -1,0 +1,1 @@
+alias brew='nocorrect brew'
