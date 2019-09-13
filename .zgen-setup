@@ -37,7 +37,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/dirpersist
     zgen oh-my-zsh plugins/last-working-dir
     zgen oh-my-zsh plugins/z
-    zgen oh-my-zsh plugins/sudo
+    # zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/thefuck
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/vagrant
     zgen oh-my-zsh plugins/pip
