@@ -63,23 +63,4 @@ unset __E
 test -e "${HOME}/.iterm2_shell_integration.zsh" &&
     source "${HOME}/.iterm2_shell_integration.zsh"
 
-# postgresql
-export PGDATABASE=postgres
-
-SPACESHIP_KUBECONTEXT_SHOW=false
-
-function k_prompt {
-    [[ $SPACESHIP_KUBECONTEXT_SHOW = true ]] &&
-    SPACESHIP_KUBECONTEXT_SHOW=false ||
-    SPACESHIP_KUBECONTEXT_SHOW=true
-}
-
-if [[ -d $HOME/.kube && -f $HOME/.kube/config ]]; then
-    __KUBECONFIGS=( $HOME/.kube/config $(print $HOME/.kube/*.config) )
-    if (( ${#__KUBECONFIGS} > 0 )); then
-        export KUBECONFIG=${(j/:/)__KUBECONFIGS}
-    fi
-    unset __KUBECONFIGS
-fi
-
-[[ -f $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+[[ ! -f $HOME/.zshrc.local ]] || source $HOME/.zshrc.local

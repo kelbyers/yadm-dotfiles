@@ -1,0 +1,2 @@
+# postgresql
+export PGDATABASE=postgres
