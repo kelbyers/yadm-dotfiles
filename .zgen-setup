@@ -32,6 +32,7 @@ if ! zgen saved; then
     zgen oh-my-zsh
     # zgen oh-my-zsh plugins/compleat
     zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git-auto-fetch
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/common-aliases
     zgen oh-my-zsh plugins/dirpersist
