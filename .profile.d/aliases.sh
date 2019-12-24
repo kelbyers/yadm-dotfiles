@@ -1,1 +1,2 @@
 alias airport=/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport
+alias fixdisplays='displayplacer "id:20F3BEA7-D779-2684-C67A-AA2DC24EAF32 res:1920x1080 hz:30 color_depth:8 scaling:on origin:(0,0) degree:0" "id:E5A6A14D-5C2D-FA04-B50E-B8DF155DB404 res:1440x900 color_depth:4 scaling:on origin:(1184,1080) degree:0" "id:07CB10A7-D3EA-383E-096A-4DEAB2B7A7AF res:1920x1080 hz:30 color_depth:8 scaling:on origin:(1920,0) degree:0"'
