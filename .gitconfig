@@ -11,6 +11,8 @@
 	sync = town sync
 [core]
 	excludesfile = ~/.gitignore_global
+	quotepath = false
+	commitGraph = true
 [commit]
 	template = ~/.stCommitMsg
 [git-town]
@@ -20,3 +22,7 @@
 	path = .gitconfig.local
 [bulkworkspaces]
 	dojo = /Users/jxb2016/git/aether-foundation/dojo/src
+[pull]
+	ff = only
+[gc]
+	writeCommitGraph = true
