@@ -8,6 +8,7 @@
 # Set environment variable DISABLE_AUTO_UPDATE=true to always reply No and never upgrade.
 #
 # Simply add one of these in your ~/.zshrc somewhere before calling source $ZSH/oh-my-zsh.sh
+[[ $(uname -s) == CYGWIN* ]] && ZSH_DISABLE_COMPFIX=true
 DISABLE_AUTO_UPDATE=true
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -39,7 +40,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/last-working-dir
     zgen oh-my-zsh plugins/z
     # zgen oh-my-zsh plugins/sudo \ ### conflicts with thefuck
-    zgen oh-my-zsh plugins/thefuck
+    # zgen oh-my-zsh plugins/thefuck
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/vagrant
     zgen oh-my-zsh plugins/pip
