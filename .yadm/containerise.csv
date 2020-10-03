@@ -1,0 +1,36 @@
+!*.alight.com , Work
+!*.amazon.com , Amazon.com
+!*.atlassian.com , Work
+!*.bswift.com , Work
+!*.docker.com , Docker.com
+!*.doordash.com , Doordash
+!*.gitlab.com , GitLab.com
+!*.goalfusion.com , Goal Fusion
+!*.goanteaterapp.com , Personal
+!*.heb.com , Shopping
+!*.iheart.com , iHrtRdio
+!*.livethehealthyorangelife.com , Work
+!*.myworkday.com , Work
+!*.pluralsight.com , Work
+!*.reddit.com , Reddit
+!*.rufus.crabdance.com , Home
+!*.travis-ci.org , GitHub.com
+!*.webex.com , Work
+@^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
+@^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
+gitlab.com , GitLab.com
+homedepot.looker.com , Work
+homedepot.service-now.com , Work
+localhost:5151 , Home
+login.microsoftonline.com , Work
+mythdhr.com , Work
+office.com , Work
+oreilly.com , Work
+pivotaltracker.com , Work
+thdengops.slack.com , Work
+the-home-depot.auth.securid.com , Work
+travis-ci.org , GitHub.com
+trello.com , Work
+twitter.com , Twitter
+us.etrade.com , E-Trade
+wealth.emaplan.com , Goal Fusion
