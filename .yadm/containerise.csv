@@ -25,11 +25,16 @@
 !*.livethehealthyorangelife.com , Work
 !*.loverslab.com , LoversLab
 !*.microsoft.com , Microsoft
+!*.microsoftonline.com , Work
 !*.mint.com , intuit
 !*.myworkday.com , Work
 !*.netflix.com , Netflix
 !*.nraas.net , NRaas
+!*.office.com , Work
 !*.onenote.com , Microsoft
+!*.oreilly.com , Work
+!*.outlook.com , Work
+!*.pivotaltracker.com , Work
 !*.pluralsight.com , Work
 !*.reddit.com , Reddit
 !*.rufus.crabdance.com , Home
@@ -46,12 +51,8 @@ gitlab.com , GitLab.com
 homedepot.looker.com , Work
 homedepot.service-now.com , Work
 localhost:5151 , Home
-login.microsoftonline.com , Work
 mythdhr.com , Work
 nextdoor.com , Nextdoor
-office.com , Work
-oreilly.com , Work
-pivotaltracker.com , Work
 simsasylum.com , Sim Asylum
 thdengops.slack.com , Work
 the-home-depot.auth.securid.com , Work
