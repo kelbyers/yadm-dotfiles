@@ -44,6 +44,7 @@
 !*.thesims3.com , Sims/EA
 !*.travis-ci.org , GitHub.com
 !*.webex.com , Work
+192.168.100.1 , Home
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
