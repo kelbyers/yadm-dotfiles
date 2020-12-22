@@ -33,7 +33,7 @@
 !*.mint.com , intuit
 !*.myworkday.com , Work
 !*.netflix.com , Netflix
-!*.nraas.net , NRaas
+!*.nraas.net , Nraas
 !*.office.com , Work
 !*.onenote.com , Microsoft
 !*.oreilly.com , Work
@@ -46,6 +46,7 @@
 !*.thesims3.com , Sims/EA
 !*.travis-ci.org , GitHub.com
 !*.webex.com , Work
+!homedepot*.service-now.com , Work
 192.168.100.1 , Home
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
@@ -55,7 +56,6 @@
 developer.mozilla.org , MDN
 gitlab.com , GitLab.com
 homedepot.looker.com , Work
-homedepot.service-now.com , Work
 localhost:5151 , Home
 mythdhr.com , Work
 nextdoor.com , Nextdoor
