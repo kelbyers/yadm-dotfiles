@@ -33,7 +33,7 @@
 !*.mint.com , intuit
 !*.myworkday.com , Work
 !*.netflix.com , Netflix
-!*.nraas.net , Nraas
+!*.nraas.net , NRaas
 !*.office.com , Work
 !*.onenote.com , Microsoft
 !*.oreilly.com , Work
@@ -60,6 +60,7 @@ localhost:5151 , Home
 mythdhr.com , Work
 nextdoor.com , Nextdoor
 portal.securecodewarrior.com , Work
+sims.fandom.com , MTS
 simsasylum.com , Sim Asylum
 thdengops.slack.com , Work
 the-home-depot.auth.securid.com , Work
