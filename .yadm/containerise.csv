@@ -45,6 +45,7 @@
 !*.thesims.com , Sims/EA
 !*.thesims3.com , Sims/EA
 !*.travis-ci.org , GitHub.com
+!*.udemy.com , udemy
 !*.webex.com , Work
 !homedepot*.service-now.com , Work
 192.168.100.1 , Home
@@ -53,6 +54,7 @@
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
 @https?:\/\/([^.]*\.)*sexysims\.info , MTS
 @https?:\/\/www.bonddesk.com/etrade/ , E-Trade
+click.redditmail.com , Reddit
 developer.mozilla.org , MDN
 gitlab.com , GitLab.com
 homedepot.looker.com , Work
