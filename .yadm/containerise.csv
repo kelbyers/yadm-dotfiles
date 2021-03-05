@@ -2,7 +2,6 @@
 !*.ally.com , Banking
 !*.amazon.com , Amazon.com
 !*.ameriprise.com , Banking
-!*.atlassian.com , Work
 !*.bankofamerica.com , Banking
 !*.bbvausa.com , Banking
 !*.bitwarden.com , Bitwarden
@@ -50,6 +49,7 @@
 !*.yammer.com , Work
 !homedepot*.service-now.com , Work
 192.168.100.1 , Home
+@^https?:\/\/([^.]*\.){0,1}atlassian.(com|net) , Work
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
