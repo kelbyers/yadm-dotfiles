@@ -1,9 +1,11 @@
+!*.advisorclient.com , Banking
 !*.alight.com , Benefits
 !*.ally.com , Banking
 !*.amazon.com , Amazon.com
 !*.ameriprise.com , Banking
 !*.bankofamerica.com , Banking
 !*.bbvausa.com , Banking
+!*.benefits.ml.com , Banking
 !*.bitwarden.com , Bitwarden
 !*.bswift.com , Work
 !*.computershare.com , Benefits
@@ -42,6 +44,7 @@
 !*.pluralsight.com , Work
 !*.reddit.com , Reddit
 !*.rufus.crabdance.com , Home
+!*.taxpackagesupport.com , Tax
 !*.thesims.com , Sims/EA
 !*.thesims3.com , Sims/EA
 !*.travis-ci.org , GitHub.com
