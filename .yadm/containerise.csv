@@ -32,6 +32,7 @@
 !*.mint.com , intuit
 !*.myworkday.com , Work
 !*.netflix.com , Netflix
+!*.netlinksolution.com , Tax
 !*.nraas.net , NRaas
 !*.office.com , Work
 !*.onenote.com , Microsoft
@@ -49,8 +50,8 @@
 !*.yammer.com , Work
 !homedepot*.service-now.com , Work
 192.168.100.1 , Home
-@^https?:\/\/([^.]*\.){0,1}atlassian.(com|net) , Work
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
+@^https?:\/\/([^.]*\.){0,1}atlassian.(com|net) , Work
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
 @https?:\/\/([^.]*\.)*sexysims\.info , MTS
