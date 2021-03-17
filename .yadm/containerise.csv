@@ -55,7 +55,7 @@
 !homedepot*.service-now.com , Work
 192.168.100.1 , Home
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
-@^https?:\/\/([^.]*\.){0,1}atlassian.(com|net) , Work
+@^https?:\/\/([^.]*\.){0,1}(atlassian|jira).(com|net) , Work
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
 @https?:\/\/([^.]*\.)*sexysims\.info , MTS
