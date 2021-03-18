@@ -23,5 +23,6 @@
 /unauthenticated
 /verification
 /startSSO.ping
-^https?://([^.]*.)?(atlassian|jira)\.(net|com)
-^https?://([^.]*.)?(medium)\.(net|com)
+^https?://([^.]*.)?(atlassian|jira)\.(net|com)/
+^https?://([^.]*.)?(medium)\.(net|com)/
+^https?://([^.]*.)?(austintexas.gov|queue-it.net)/
