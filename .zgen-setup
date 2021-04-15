@@ -58,8 +58,9 @@ if ! zgen saved; then
     zgen load unixorn/autoupdate-zgen
     zgen load zsh-users/zsh-completions
 
-    export NVM_COMPLETION=true NVM_LAZY_LOAD=true
+    export NVM_COMPLETION=true NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
     zgen load lukechilds/zsh-nvm
+    nvm upgrade
 
     zgen save
 fi
