@@ -49,6 +49,7 @@
 !*.pluralsight.com , Work
 !*.reddit.com , Reddit
 !*.rufus.crabdance.com , Home
+!*.smartsheet.com , Work
 !*.taxpackagesupport.com , Tax
 !*.thesims.com , Sims/EA
 !*.thesims3.com , Sims/EA
@@ -56,6 +57,7 @@
 !*.trycaviar.com , Doordash
 !*.udemy.com , udemy
 !*.webex.com , Work
+!*.wordpress.com , WordPress
 !*.yammer.com , Work
 !homedepot*.service-now.com , Work
 192.168.100.1 , Home
@@ -69,6 +71,7 @@
 @https?:\/\/www.bonddesk.com/etrade/ , E-Trade
 click.redditmail.com , Reddit
 developer.mozilla.org , MDN
+en.gravatar.com , WordPress
 gitlab.com , GitLab.com
 homedepot.looker.com , Work
 localhost:5151 , Home
@@ -84,3 +87,4 @@ travis-ci.org , GitHub.com
 trello.com , Work
 twitter.com , Twitter
 wealth.emaplan.com , Goal Fusion
+wordpress.com , WordPress
