@@ -13,7 +13,6 @@
 !*.bswift.com , Work
 !*.claimxperience.com , Banking
 !*.computershare.com , Benefits
-!*.docker.com , Docker.com
 !*.doordash.com , Doordash
 !*.dropbox.com , Dropbox
 !*.ea.com , Sims/EA
@@ -66,6 +65,7 @@
 @^.*(?<!\/(www|thdsaml|hdapps))\.homedepot\.com(:[0-9]+)?\/ , Work
 @^https?:\/\/([^.]*\.){0,1}(atlassian|jira).(com|net) , Work
 @^https?:\/\/([^.]*\.){0,1}tumblr\.com , Tumblr
+@^https?:\/\/([^\/]*\.)*docker\.com\/ , Docker.com
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
 @https?:\/\/([^.]*\.)*modthesims2\.com , MTS
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
