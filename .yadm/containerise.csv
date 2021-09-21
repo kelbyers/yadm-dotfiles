@@ -67,6 +67,7 @@
 @^https?:\/\/([^.]*\.){0,1}tumblr\.com , Tumblr
 @^https?:\/\/([^\/]*\.)*docker\.com\/ , Docker.com
 @^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
+@https://app.pagerduty.com/auth/google_oauth2_special?origin=https%3a%2f%2fthehomedepot.pagerduty.com%2f , Work
 @https?:\/\/([^.]*\.)*modthesims2\.com , MTS
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
 @https?:\/\/([^.]*\.)*sexysims\.info , MTS
@@ -85,6 +86,7 @@ sims.fandom.com , MTS
 simsasylum.com , Sim Asylum
 thdengops.slack.com , Work
 the-home-depot.auth.securid.com , Work
+thehomedepot.pagerduty.com , Work
 travis-ci.org , GitHub.com
 trello.com , Work
 twitter.com , Twitter
