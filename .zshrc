@@ -46,11 +46,11 @@ done
 fpath+=(~/.zfunc)
 
 ##############################################################################
-# zgen
+# zgenom
 ##############################################################################
-ZGEN_AUTOUPDATE_VERBOSE=1   # display a handy message when autoupdate runs!
-if [ -f ~/.zgen-setup ]; then
-    source ~/.zgen-setup
+# ZGEN_AUTOUPDATE_VERBOSE=1   # display a handy message when autoupdate runs!
+if [ -f ~/.zgenom-setup ]; then
+    source ~/.zgenom-setup
 fi
 
 # enable extended glob search features. This allows things like:
