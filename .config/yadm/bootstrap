@@ -9,6 +9,12 @@ yadm submodule update --recursive --init
 
 system_type=$(uname -s)
 
+if [ ! -d "$HOME/.zgenom" ] || [ ! -f "$HOME/.zgenom/.git" ]; then
+  mkdir -p $HOME/.zgenom
+  cd $HOME/.zgenom
+  git clone https://github.com/jandamm/zgenom.git .
+fi
+
 if [ "$system_type" = "Darwin" ]; then
 
   # install homebrew if it's missing
