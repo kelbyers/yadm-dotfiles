@@ -1,0 +1,67 @@
+# vim:ft=shellscript
+
+# https://github.com/jandamm/zgenom
+
+# load zgenom
+
+# disable annoying oh-my-zsh update prompt
+# https://stackoverflow.com/a/25876379
+# Set environment variable DISABLE_UPDATE_PROMPT=true to always reply Yes and automatically upgrade.
+#
+# Set environment variable DISABLE_AUTO_UPDATE=true to always reply No and never upgrade.
+#
+# Simply add one of these in your ~/.zshrc somewhere before calling source $ZSH/oh-my-zsh.sh
+[[ $(uname -s) == CYGWIN* ]] && ZSH_DISABLE_COMPFIX=true
+DISABLE_AUTO_UPDATE=true
+
+ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc ${HOME}/.zgenom-setup)
+[[ -f $HOME/.zshrc.local ]] && ZGEN_RESET_ON_CHANGE+=($HOME/.zshrc.local)
+
+source "${HOME}/.zgenom/zgenom.zsh"
+
+# Update every 7 days
+zgenom autoupdate --background
+
+# if the init scipt doesn't exist
+if ! zgenom saved; then
+    echo "Creating a zgenom save"
+
+    # # Disable loading default Prezto modules
+    # # This is necessary due to a quirk of zgenom that will load these plugins after
+    # # our custom plugins, overwriting our customizations
+    # # https://github.com/tarjoilija/zgen/issues/74
+    # export ZGEN_PREZTO_LOAD_DEFAULT=0
+
+    zgenom oh-my-zsh
+    zgenom oh-my-zsh plugins/git
+    zgenom oh-my-zsh plugins/git-auto-fetch
+    zgenom oh-my-zsh plugins/colored-man-pages
+    zgenom oh-my-zsh plugins/common-aliases
+    zgenom oh-my-zsh plugins/dirpersist
+    zgenom oh-my-zsh plugins/last-working-dir
+    zgenom oh-my-zsh plugins/z
+    zgenom oh-my-zsh plugins/wd
+    zgenom oh-my-zsh plugins/vagrant
+    zgenom oh-my-zsh plugins/pip
+    zgenom oh-my-zsh plugins/python
+    # pyenv \ ### DO NOT USE pyenv PLUGIN!!! Breaks pyenv!!!
+    zgenom oh-my-zsh plugins/bundler
+    zgenom oh-my-zsh plugins/brew
+    zgenom oh-my-zsh plugins/osx
+    zgenom oh-my-zsh plugins/golang
+    zgenom oh-my-zsh plugins/helm
+    zgenom oh-my-zsh plugins/kubectl
+
+    zgenom load denysdovhan/spaceship-prompt spaceship
+    zgenom load dannyzen/cf-zsh-autocomplete-plugin
+    zgenom load zsh-users/zsh-completions
+
+    export NVM_COMPLETION=true NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
+    zgenom load lukechilds/zsh-nvm
+    nvm upgrade
+
+    zgenom compile "${HOME}/.zshrc"
+    zgenom compile "${HOME}/.zgenom-setup"
+
+    zgenom save
+fi
