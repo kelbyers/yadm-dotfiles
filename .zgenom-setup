@@ -55,6 +55,7 @@ if ! zgenom saved; then
     zgenom load denysdovhan/spaceship-prompt spaceship
     zgenom load dannyzen/cf-zsh-autocomplete-plugin
     zgenom load zsh-users/zsh-completions
+    zgenom load zsh-users/zsh-autosuggestions
 
     export NVM_COMPLETION=true NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
     zgenom load lukechilds/zsh-nvm
