@@ -33,7 +33,7 @@ function yadm-check-all {
         # Check all remotes (avoid ssh passphrase prompt)
         date -R "$yadmdir/CHECK_LOG" &> !
         GIT_SSH_COMMAND="command ssh -o BatchMode=yes" \
-            command yadm fetch --dry-run 2> /dev/null &>> "$yadmdir/CHECK_LOG"
+            command yadm fetch --progress --dry-run 2> /dev/null > "$yadmdir/CHECK_LOG"
         [[ $(zstat +size "$yadmdir/CHECK_LOG") -ne 0 ]] && {
             echo "YADM:"
             cat "$yadmdir/CHECK_LOG"
