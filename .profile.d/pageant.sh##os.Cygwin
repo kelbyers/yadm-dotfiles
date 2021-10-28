@@ -5,6 +5,12 @@ fi
 echo "Starting ssh-pageant..."
 eval $(/usr/bin/ssh-pageant)
 echo "SSH Keys:"
+for _I in 1 2 3; do
+    ssh-add -l > /dev/null 2>&1 && break
+    echo "    Waiting for ssh-pageant to be ready..."
+    sleep 1
+done
+unset _I
 ssh-add -l | while read LINE; do
     echo "    ${LINE}"
 done
