@@ -1,2 +1,10 @@
 [credential]
         helper = manager
+[user]
+	name = kel
+	email = ruferto@gmail.com
+[difftool "sourcetree"]
+	cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
