@@ -32,14 +32,8 @@ function yadm-check-all {
 
         # Check all remotes (avoid ssh passphrase prompt)
         GIT_SSH_COMMAND="command ssh -o BatchMode=yes" \
-            command yadm fetch --progress --dry-run 2> /dev/null > "$yadmdir/CHECK_LOG"
-        [[ $(zstat +size "$yadmdir/CHECK_LOG") -ne 0 ]] && {
-            echo "YADM:"
-            cat "$yadmdir/CHECK_LOG"
-        }
-
-    ) #&
-    #disown
+            command yadm fetch --progress > "$yadmdir/CHECK_LOG" 2>&1
+    ) &|
 }
 
 (( ! ${+functions[_yadm-auto-check_zle-line-init]} )) || return 0
@@ -47,7 +41,7 @@ function yadm-check-all {
 case "$widgets[zle-line-init]" in
 # Simply define the function if zle-line-init doesn't yet exist
 builtin | "") function _yadm-auto-check_zle-line-init() {
-    yadm-check-all
+    yadm-check-all⊚
 } ;;
 # Override the current zle-line-init widget, calling the old one
 user:*)
@@ -58,5 +52,28 @@ user:*)
     }
     ;;
 esac
+
+SPACESHIP_YADM_SHOW="${SPACESHIP_YADM_SHOW=true}"
+SPACESHIP_YADM_SYMBOL="${SPACESHIP_YADM_SYMBOL=⊚}"
+SPACESHIP_YADM_PREFIX="${SPACESHIP_YADM_PREFIX=yadm: }"
+SPACESHIP_YADM_SUFFIX="${SPACESHIP_YADM_SUFFIX=$SPACESHIP_PROMPT_DEFAULT_SUFFIX}"
+SPACESHIP_YADM_COLOR="${SPACESHIP_YADM_COLOR=white}"
+spaceship_yadm () {
+    [[ $SPACESHIP_YADM_SHOW == false ]] && return
+
+    # check if yadm is out of date
+    [[ -z "$(yadm status --porcelain -b 2> /dev/null |
+        grep -v '^## master...origin/master$')" ]] && return
+
+    spaceship::section \
+        "$SPACESHIP_YADM_COLOR" \
+        "$SPACESHIP_YADM_PREFIX" \
+        "$SPACESHIP_YADM_SYMBOL" \
+        "$SPACESHIP_YADM_SUFFIX"
+}
+__YADM_GIT_ORDER=${SPACESHIP_PROMPT_ORDER[(ie)git]}
+SPACESHIP_PROMPT_ORDER=( ${SPACESHIP_PROMPT_ORDER[0,$((__YADM_GIT_ORDER - 1))]}
+    yadm ${SPACESHIP_PROMPT_ORDER[$__YADM_GIT_ORDER, -1]})
+unset __YADM_GIT_ORDER
 
 zle -N zle-line-init _yadm-auto-check_zle-line-init
