@@ -19,6 +19,7 @@
 !*.ea.com , Sims/EA
 !*.etrade.com , E-Trade
 !*.etrade.wallst.com , E-Trade
+!*.evive.io , Work
 !*.fanfiction.net , FFN
 !*.farmers.com , Banking
 !*.gitlab.com , GitLab.com
@@ -49,6 +50,7 @@
 !*.paypal.com , Banking
 !*.pivotaltracker.com , Work
 !*.pluralsight.com , Work
+!*.pnc.com , Banking
 !*.reddit.com , Reddit
 !*.rufus.crabdance.com , Home
 !*.smartsheet.com , Work
@@ -75,6 +77,7 @@
 @https?:\/\/www.bonddesk.com/etrade/ , E-Trade
 click.redditmail.com , Reddit
 developer.mozilla.org , MDN
+duckduckgo.com , DDG
 en.gravatar.com , WordPress
 gitlab.com , GitLab.com
 homedepot.looker.com , Work
