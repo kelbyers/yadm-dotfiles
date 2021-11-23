@@ -47,7 +47,7 @@ if ! zgenom saved; then
     # pyenv \ ### DO NOT USE pyenv PLUGIN!!! Breaks pyenv!!!
     zgenom oh-my-zsh plugins/bundler
     zgenom oh-my-zsh plugins/brew
-    zgenom oh-my-zsh plugins/osx
+    zgenom oh-my-zsh plugins/macos
     zgenom oh-my-zsh plugins/golang
     zgenom oh-my-zsh plugins/helm
     zgenom oh-my-zsh plugins/kubectl
