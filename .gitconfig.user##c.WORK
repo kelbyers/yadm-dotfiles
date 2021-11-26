@@ -1,4 +1,6 @@
-# vim:ft=properties
+# vim:ft=gitconfig
 [user]
 	name = Kel Byers
 	email = kel_byers@homedepot.com
+[url "git@github.homedepot.com:"]
+	insteadOf = "https://github.homedepot.com/"

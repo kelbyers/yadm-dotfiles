@@ -1,4 +1,4 @@
-# vim:ft=properties
+# vim:ft=gitconfig
 [alias]
 	append = town append
 	hack = town hack
