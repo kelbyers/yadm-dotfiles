@@ -1,5 +1,6 @@
+# vim: ft=gitconfig
 [credential]
-        helper = manager
+	helper = manager
 [user]
 	name = kel
 	email = ruferto@gmail.com

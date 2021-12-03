@@ -1,3 +1,4 @@
+# vim: ft=gitconfig
 [credential]
 	helper = osxkeychain
 [user]

@@ -1,4 +1,4 @@
-# vim:ft=properties
+# vim: ft=gitconfig
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
 	path = -ro

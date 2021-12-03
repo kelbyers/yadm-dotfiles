@@ -1,4 +1,4 @@
-# vim:ft=properties
+# vim: ft=gitconfig
 [user]
 	name = Kel Byers
 	email = ruferto@gmail.com

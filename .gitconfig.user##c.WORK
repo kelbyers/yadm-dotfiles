@@ -1,4 +1,4 @@
-# vim:ft=gitconfig
+# vim: ft=gitconfig
 [user]
 	name = Kel Byers
 	email = kel_byers@homedepot.com

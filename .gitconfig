@@ -1,4 +1,7 @@
-# vim:ft=gitconfig
+# vim: ft=gitconfig
+# vscode extensions needed:
+# - 'Gitconfig Syntax'
+# - 'Modelines'
 [alias]
 	append = town append
 	hack = town hack
