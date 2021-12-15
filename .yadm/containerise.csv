@@ -6,6 +6,7 @@
 !*.amazon.com , Amazon.com
 !*.americanexpress.com , Banking
 !*.ameriprise.com , Banking
+!*.ansible.com , RedHat
 !*.austintexas.gov , Austin Gov
 !*.bankofamerica.com , Banking
 !*.bbvausa.com , Banking
@@ -52,6 +53,7 @@
 !*.pluralsight.com , Work
 !*.pnc.com , Banking
 !*.reddit.com , Reddit
+!*.redhat.com , RedHat
 !*.rufus.crabdance.com , Home
 !*.smartsheet.com , Work
 !*.taxpackagesupport.com , Tax
