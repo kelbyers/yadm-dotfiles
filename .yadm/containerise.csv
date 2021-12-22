@@ -72,7 +72,8 @@
 @^https?:\/\/([^.]*\.){0,1}(atlassian|jira).(com|net) , Work
 @^https?:\/\/([^.]*\.){0,1}tumblr\.com , Tumblr
 @^https?:\/\/([^\/]*\.)*docker\.com\/ , Docker.com
-@^https?:\/\/([^\/]*\.)*github\.(io|com)\/ , GitHub.com
+@^https?:\/\/([^\/]*\.)*github\.(io|com)\/((enterprises\/homedepot)|((orgs\/)?one-thd)|(kel-byers_thdgit))(\/.*)*$ , Work
+@^https?:\/\/([^\/]*\.)*github\.(io|com)\/(?!(enterprises\/homedepot)|((orgs\/)?one-thd)|(kel-byers_thdgit)\/?) , GitHub.com
 @https://app.pagerduty.com/auth/google_oauth2_special?origin=https%3a%2f%2fthehomedepot.pagerduty.com%2f , Work
 @https?:\/\/([^.]*\.)*modthesims2\.com , MTS
 @https?:\/\/([^.]*\.)*modthesims\.info , MTS
