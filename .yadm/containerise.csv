@@ -54,7 +54,7 @@
 !*.pluralsight.com , Work
 !*.pnc.com , Banking
 !*.primevideo.com , Amazon.com
-!*.reddit.com , Reddit
+@^https?:\/\/([^.]*\.){0,1}reddit\.com(:[0-9]+)?\/ , Reddit
 !*.redhat.com , RedHat
 !*.rufus.crabdance.com , Home
 !*.smartsheet.com , Work

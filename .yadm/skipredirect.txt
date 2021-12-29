@@ -26,3 +26,4 @@
 ^https?://([^.]*.)?(atlassian|jira)\.(net|com)/
 ^https?://([^.]*.)?(medium)\.(net|com)/
 ^https?://([^.]*.)?(austintexas.gov|queue-it.net)/
+^https://web.archive.org/web/.*
