@@ -27,3 +27,4 @@
 ^https?://([^.]*.)?(medium)\.(net|com)/
 ^https?://([^.]*.)?(austintexas.gov|queue-it.net)/
 ^https://web.archive.org/web/.*
+^https://([^.]*.)?homedepot.com/
