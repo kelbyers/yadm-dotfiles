@@ -1,6 +1,6 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2022-01-13T15:57:12.398Z",
+    "createdAt": "2022-01-21T22:18:07.215Z",
     "redirects": [
         {
             "description": "Example redirect, try going to http://example.com/anywordhere",
@@ -20,15 +20,49 @@
             ]
         },
         {
-            "description": "Always smile for amazon!",
-            "exampleUrl": "http://www.amazon.com/somewhere-fun",
-            "exampleResult": "https://smile.amazon.com/somewhere-fun",
+            "description": "Smile Amazon",
+            "exampleUrl": "https://www.amazon.com/gp/product/B087PDGDVJ",
+            "exampleResult": "https://smile.amazon.com/gp/product/B087PDGDVJ",
             "error": null,
             "includePattern": "https?://(?!smile\\.)([^.]+\\.)?amazon.com(/.*)?$",
             "excludePattern": "",
             "patternDesc": "redirect all amazon requests to use smile.amazon.com",
             "redirectUrl": "https://smile.amazon.com$2",
             "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "YouTube Out",
+            "exampleUrl": "https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXhIOV9pc2VIelUwMHFsYXJ1NXdlYzBLUFU5d3xBQ3Jtc0ttYXNVU2ZEZF9fS1hkMDYyZ3JZWG9vLUpyeGRFdjktclRFZzZPaTNqNmNuLTlrLVFRRU5UOFBGajQ2dFB4Z0t4cndJaUtzRFVaYzRaLWRMTk80RW5NY2cxbndTNldwMTlaQkg3N2NvaWQ1Ry1pbG5YQQ&q=http%3A%2F%2Fartemis-sims.tumblr.com%2F",
+            "exampleResult": "http://artemis-sims.tumblr.com/",
+            "error": null,
+            "includePattern": "https://([^\\.]*\\.)*youtube\\.com/redirect\\?([^&]*&)*q=(.*)",
+            "excludePattern": "",
+            "patternDesc": "Go directly to link, skipping YouTube's nonsense",
+            "redirectUrl": "$3",
+            "patternType": "R",
+            "processMatches": "urlDecode",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
+        {
+            "description": "Google Out",
+            "exampleUrl": "https://www.google.com/url?q=http://www.example.com",
+            "exampleResult": "http://www.example.com",
+            "error": null,
+            "includePattern": "https://www.google.com/url?q=*",
+            "excludePattern": "",
+            "patternDesc": "Wherever Google is trying to send me to, go directly there",
+            "redirectUrl": "$1",
+            "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
             "grouped": false,
