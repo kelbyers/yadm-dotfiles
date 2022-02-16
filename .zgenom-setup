@@ -33,8 +33,8 @@ if ! zgenom saved; then
     # export ZGEN_PREZTO_LOAD_DEFAULT=0
 
     zgenom oh-my-zsh
-    zgenom oh-my-zsh plugins/git
-    zgenom oh-my-zsh plugins/git-auto-fetch
+    zgenom oh-my-zsh plugins/brew
+    zgenom oh-my-zsh plugins/bundler
     zgenom oh-my-zsh plugins/colored-man-pages
     zgenom oh-my-zsh plugins/common-aliases
     zgenom oh-my-zsh plugins/copydir
@@ -42,16 +42,16 @@ if ! zgenom saved; then
     zgenom oh-my-zsh plugins/direnv
     zgenom oh-my-zsh plugins/dirhistory
     zgenom oh-my-zsh plugins/dirpersist
+    zgenom oh-my-zsh plugins/git
+    zgenom oh-my-zsh plugins/git-auto-fetch
+    zgenom oh-my-zsh plugins/golang
+    zgenom oh-my-zsh plugins/macos
+    zgenom oh-my-zsh plugins/pip
+    # pyenv \ ### DO NOT USE pyenv PLUGIN!!! Breaks pyenv!!!
+    zgenom oh-my-zsh plugins/python
     zgenom oh-my-zsh plugins/vagrant
     zgenom oh-my-zsh plugins/wd
     zgenom oh-my-zsh plugins/z
-    zgenom oh-my-zsh plugins/pip
-    zgenom oh-my-zsh plugins/python
-    # pyenv \ ### DO NOT USE pyenv PLUGIN!!! Breaks pyenv!!!
-    zgenom oh-my-zsh plugins/bundler
-    zgenom oh-my-zsh plugins/brew
-    zgenom oh-my-zsh plugins/macos
-    zgenom oh-my-zsh plugins/golang
 
     zgenom load denysdovhan/spaceship-prompt spaceship
     zgenom load dannyzen/cf-zsh-autocomplete-plugin
