@@ -50,13 +50,13 @@ if ! zgenom saved; then
     # pyenv \ ### DO NOT USE pyenv PLUGIN!!! Breaks pyenv!!!
     zgenom oh-my-zsh plugins/python
     zgenom oh-my-zsh plugins/vagrant
-    zgenom oh-my-zsh plugins/wd
     zgenom oh-my-zsh plugins/z
 
-    zgenom load denysdovhan/spaceship-prompt spaceship
     zgenom load dannyzen/cf-zsh-autocomplete-plugin
-    zgenom load zsh-users/zsh-completions
+    zgenom load denysdovhan/spaceship-prompt spaceship
+    zgenom load mfaerevaag/wd
     zgenom load zsh-users/zsh-autosuggestions
+    zgenom load zsh-users/zsh-completions
 
     export NVM_COMPLETION=true NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
     zgenom load lukechilds/zsh-nvm
