@@ -4,3 +4,5 @@
 	email = kel_byers@homedepot.com
 [url "git@github.homedepot.com:"]
 	insteadOf = "https://github.homedepot.com/"
+[url "git@github.com:one-thd/"]
+	insteadOf = "https://github.com/one-thd/"
