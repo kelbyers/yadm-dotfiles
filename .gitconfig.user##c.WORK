@@ -6,3 +6,5 @@
 	insteadOf = "https://github.homedepot.com/"
 [url "git@github.com:one-thd/"]
 	insteadOf = "https://github.com/one-thd/"
+[url "git@github.com:JXB2016_thdgit/"]
+	insteadOf = "https://github.com/JXB2016_thdgit/"
