@@ -1,0 +1,5 @@
+if [[ -n "$VIRTUAL_ENV" ]]; then
+    if typeset -f deactivate > /dev/null; then
+        deactivate
+    fi
+fi
