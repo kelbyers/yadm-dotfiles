@@ -54,7 +54,7 @@ if ! zgenom saved; then
 
     zgenom load baliestri/pnpm.plugin.zsh
     zgenom load dannyzen/cf-zsh-autocomplete-plugin
-    zgenom load denysdovhan/spaceship-prompt spaceship
+    zgenom load spaceship-prompt/spaceship-prompt spaceship
     zgenom load mfaerevaag/wd
     zgenom load zsh-users/zsh-autosuggestions
     zgenom load zsh-users/zsh-completions
