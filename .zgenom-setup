@@ -61,7 +61,7 @@ if ! zgenom saved; then
 
     export NVM_COMPLETION=true NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn' 'pnpm')
     zgenom load lukechilds/zsh-nvm
-    nvm upgrade
+    # nvm upgrade
 
     zgenom compile "${HOME}/.zshrc"
     zgenom compile "${HOME}/.zgenom-setup"
