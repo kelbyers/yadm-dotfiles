@@ -5,10 +5,6 @@
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 export COMPLETION_WAITING_DOTS="true"
 
-## Spaceship Prompt Customizations
-export SPACESHIP_EXIT_CODE_SHOW=true
-export SPACESHIP_HOST_SHOW=always
-
 export ZSH_CACHE_DIR="$HOME/.cache"
 
 [[ ! -d ${ZSH_CACHE_DIR} ]] && mkdir -p ${ZSH_CACHE_DIR}
