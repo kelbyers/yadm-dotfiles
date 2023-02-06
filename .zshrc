@@ -64,7 +64,4 @@ export GIT_PAGER="less -RFX"
 done
 unset __E
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" &&
-    source "${HOME}/.iterm2_shell_integration.zsh"
-
 [[ ! -f $HOME/.zshrc.local ]] || source $HOME/.zshrc.local

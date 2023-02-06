@@ -67,12 +67,6 @@ if ! zgenom saved; then
     ## asdf stuff
     # update all plugins
     asdf plugin update --all
-    # update direnv version
-    # trick the stupid shell integration. I already have what it does in a
-    # different file than ~/.zshrc and don't want it readded there every time
-    # this runs!
-    ZDOTDIR=${TMPDIR-${TMP-/tmp}} asdf direnv setup --shell zsh --version latest
-    asdf global direnv latest
 
     zgenom compile "${HOME}/.zshrc"
     zgenom compile "${HOME}/.zgenom-setup"
