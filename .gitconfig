@@ -12,7 +12,6 @@
 	rename-branch = town rename-branch
 	repo = town repo
 	ship = town ship
-	sync = town sync
 [core]
 	excludesfile = ~/.gitignore_global
 	quotepath = false
