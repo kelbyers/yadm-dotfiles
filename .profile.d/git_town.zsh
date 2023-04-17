@@ -1,1 +1,1 @@
-source <(git-town install completions zsh)
+source <(git-town completions zsh)
