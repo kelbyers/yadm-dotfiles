@@ -65,7 +65,3 @@ done
 unset __E
 
 [[ ! -f $HOME/.zshrc.local ]] || source $HOME/.zshrc.local
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jxb2016/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
