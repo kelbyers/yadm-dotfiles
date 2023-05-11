@@ -97,8 +97,16 @@ symbol = " "
 [scala]
 symbol = " "
 
+[shell]
+disabled = false
+zsh_indicator = ''
+format = '[$indicator]($style)'
+
 [shlvl]
 disabled = false
 
 [spack]
 symbol = "🅢 "
+
+[status]
+disabled = false
