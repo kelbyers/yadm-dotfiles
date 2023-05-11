@@ -3,6 +3,10 @@ if ! which yadm > /dev/null; then
     return 0
 fi
 
+if [[ -z $SPACESHIP_VERSION ]]; then
+    return 0
+fi
+
 # Default auto-check interval: 3600 seconds
 : ${YADM_AUTO_CHECK_INTERVAL:=3600}
 
