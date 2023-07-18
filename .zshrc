@@ -1,7 +1,6 @@
 ##############################################################################
 # Customizations
 ##############################################################################
-
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 export COMPLETION_WAITING_DOTS="true"
 
@@ -44,6 +43,16 @@ done
 # user completions
 ##############################################################################
 fpath+=(~/.zfunc)
+
+##############################################################################
+# work around o-m-z brew plugin for M1 & amd64 at same time
+##############################################################################
+# set -x
+if [[ -x /opt/homebrew/bin/brew && -x /usr/local/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    alias ibrew='arch -x86_64 /usr/local/bin/brew'
+    alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+fi
 
 ##############################################################################
 # zgenom
