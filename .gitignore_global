@@ -4,3 +4,5 @@
 *.iml
 .*.sw?
 .direnv
+.envrc
+/tmp
