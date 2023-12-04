@@ -58,6 +58,7 @@ if ! zgenom saved; then
     zgenom load baliestri/pnpm.plugin.zsh
     zgenom load dannyzen/cf-zsh-autocomplete-plugin
     zgenom load mfaerevaag/wd
+    zgenom load unixorn/fzf-zsh-plugin
     zgenom load zsh-users/zsh-autosuggestions
     zgenom load zsh-users/zsh-completions
 

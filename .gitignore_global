@@ -5,4 +5,5 @@
 .*.sw?
 .direnv
 .envrc
+.tool-versions
 /tmp
