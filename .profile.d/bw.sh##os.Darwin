@@ -14,6 +14,7 @@ wf_bundle_id=com.lisowski-development.alfred.bitwarden
 wf_keychain_account_name=token
 
 function bwauth_get_from_Alfred() {
+    export NODE_EXTRA_CA_CERTS=/usr/local/munki/thd_certs.pem
     local temp_bw_session
     temp_bw_session="$(
         /usr/bin/security find-generic-password \
@@ -30,6 +31,7 @@ function bwauth_get_from_Alfred() {
 }
 
 function bwauth_save_to_Alfred() {
+    export NODE_EXTRA_CA_CERTS=/usr/local/munki/thd_certs.pem
     local temp_bw_session
     bwauth_login_via_api 2> /dev/null
     temp_bw_session=$(bw unlock --raw)
@@ -46,5 +48,6 @@ function bwauth_save_to_Alfred() {
 function bwauth_login_via_api() {
     export BW_CLIENTID=your_api_client_id
     export BW_CLIENTSECRET=your_api_client_secret
+    export NODE_EXTRA_CA_CERTS=/usr/local/munki/thd_certs.pem
     bw login --apikey
 }
