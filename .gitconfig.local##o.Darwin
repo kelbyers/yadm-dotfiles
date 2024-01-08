@@ -1,4 +1,15 @@
 # vim: ft=gitconfig
+[alias]
+	append = town append
+	diff-parent = town diff-parent
+	hack = town hack
+	kill = town kill
+	prepend = town prepend
+	propose = town propose
+	rename-branch = town rename-branch
+	repo = town repo
+	ship = town ship
+	sync = town sync
 [difftool "sourcetree"]
 	cmd = /opt/homebrew/bin/bcomp \"$LOCAL\" \"$REMOTE\"
 	path = -ro
@@ -15,3 +26,5 @@
 	helper = osxkeychain
 [credentials]
 	helper = osxkeychain
+[git-town]
+	push-new-branches = true

@@ -2,18 +2,6 @@
 # vscode extensions needed:
 # - 'Gitconfig Syntax'
 # - 'Modelines'
-[alias]
-	append = town append
-	hack = town hack
-	kill = town kill
-	new-pull-request = town new-pull-request
-	prepend = town prepend
-	prune-branches = town prune-branches
-	rename-branch = town rename-branch
-	repo = town repo
-	ship = town ship
-	diff-parent = town diff-parent
-	sync = town sync
 [core]
 	excludesfile = ~/.gitignore_global
 	quotepath = false
@@ -23,11 +11,7 @@
 [include]
 	path = .gitconfig.user
 	path = .gitconfig.local
-[bulkworkspaces]
-	dojo = /Users/jxb2016/git/aether-foundation/dojo/src
 [pull]
 	ff = only
 [gc]
 	writeCommitGraph = true
-[git-town]
-	push-new-branches = true
