@@ -15,3 +15,5 @@
 	ff = only
 [gc]
 	writeCommitGraph = true
+[init]
+	defaultBranch = main
