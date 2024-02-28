@@ -8,3 +8,6 @@
 	insteadOf = "https://github.com/one-thd/"
 [url "git@github.com:JXB2016_thdgit/"]
 	insteadOf = "https://github.com/JXB2016_thdgit/"
+[bulkworkspaces]
+	dope = /Users/jxb2016/git/one-thd/dope
+	pcf = /Users/jxb2016/git/one-thd/pcf_support
