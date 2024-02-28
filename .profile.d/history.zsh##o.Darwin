@@ -1,3 +1,4 @@
+# vim: set ft=shellscript
 : ${HISTFILE_BACKUP:=${HISTFILE}.backup}
 export HISTFILE_BACKUP
 
