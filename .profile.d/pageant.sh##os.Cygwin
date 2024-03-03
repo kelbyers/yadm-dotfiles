@@ -1,8 +1,6 @@
 # vim: set ft=shellscript
-#### don't load this, not working with zsh for unknown reasons
-return 0
 
-if ! ps -W | grep "\\pageant.exe" > /dev/null 2>&1 ; then
+if ! ps -W | grep '\\pageant.exe' > /dev/null 2>&1 ; then
     echo "Starting pageant..."
     start_pageant.bat
 fi
