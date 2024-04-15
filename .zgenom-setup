@@ -49,7 +49,11 @@ if ! zgenom saved; then
     zgenom oh-my-zsh plugins/git
     zgenom oh-my-zsh plugins/git-auto-fetch
     zgenom oh-my-zsh plugins/golang
-    zgenom oh-my-zsh plugins/kubectl
+    if [[ -f ${HOME}/.rd/bin/kubectl ]]; then
+        # on (work) macOS, kubectl is part of Rancher Desktop
+        # check if we have it installed before adding the plugin
+        zgenom oh-my-zsh plugins/kubectl
+    fi
     zgenom oh-my-zsh plugins/macos
     zgenom oh-my-zsh plugins/pip
     zgenom oh-my-zsh plugins/python
