@@ -6,10 +6,10 @@
 	cmd = /opt/homebrew/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 [diff]
-	tool = bc4
+	tool = bc
 [merge]
-	tool = bc4
-[mergetool "bc4"]
+	tool = bc
+[mergetool "bc"]
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
