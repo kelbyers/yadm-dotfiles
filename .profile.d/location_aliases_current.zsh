@@ -1,1 +1,0 @@
-./locations/location_aliases_non_thd.zsh
