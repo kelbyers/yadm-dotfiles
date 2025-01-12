@@ -9,10 +9,13 @@ cd "$HOME"
 
 system_type=$(uname -s)
 
-if [ ! -d "$HOME/.zgenom" ] || [ ! -f "$HOME/.zgenom/.git" ]; then
-  mkdir -p $HOME/.zgenom
-  cd $HOME/.zgenom
-  git clone https://github.com/jandamm/zgenom.git .
+# only set up zgenon if zsh is available
+if command -v zsh; then
+  if [ ! -d "$HOME/.zgenom" ] || [ ! -f "$HOME/.zgenom/.git" ]; then
+    mkdir -p $HOME/.zgenom
+    cd $HOME/.zgenom
+    git clone https://github.com/jandamm/zgenom.git .
+  fi
 fi
 
 if [ "$system_type" = "Darwin" ]; then
