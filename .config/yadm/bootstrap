@@ -9,6 +9,20 @@ cd "$HOME"
 
 system_type=$(uname -s)
 
+# set up symlinks for windows
+if [[ "$(uname -o)" = "Msys" ]]; then
+  echo "Configuring windows"
+  system_type=$(uname -o)
+  export MSYS=winsymlinks:nativestrict
+fi
+
+# set up nushell configs
+if command -v nu; then
+  echo "Configuring nushell"
+  nu -c 'mkdir ($nu.config-path | path dirname)'
+  ln -s "$HOME/.config/nushell/config.nu" "$(nu -c '$nu.config-path')"
+fi
+
 # only set up zgenon if zsh is available
 if command -v zsh; then
   if [ ! -d "$HOME/.zgenom" ] || [ ! -f "$HOME/.zgenom/.git" ]; then
