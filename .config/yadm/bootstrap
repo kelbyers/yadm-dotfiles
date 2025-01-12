@@ -4,8 +4,8 @@
 # be run from within $HOME (assuming this is the root of your dotfiles)
 cd "$HOME"
 
-echo "Init submodules"
-yadm submodule update --recursive --init
+# echo "Init submodules"
+# yadm submodule update --recursive --init
 
 system_type=$(uname -s)
 
