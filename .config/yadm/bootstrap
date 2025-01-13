@@ -19,13 +19,18 @@ fi
 # set up nushell configs
 if command -v nu; then
   echo "Configuring nushell"
-  nu -c 'mkdir ($nu.config-path | path dirname)'
-  ln -s "$HOME/.config/nushell/config.nu" "$(nu -c '$nu.config-path')"
+  nu_cfg_dir=$(nu -c '$nu.default-config-dir')
+  nu -c 'mkdir $nu.default-config-dir'
+  cfg_path=$(nu -c '[($nu.default-config-dir) "config.nu"] | path join')
+  [[ -L "$cfg_path" ]] && unlink "$cfg_path"
+  [[ -e "$cfg_path" ]] && mv "$cfg_path" "$cfg_path.bak"
+  ln -s "$HOME/.config/nushell/config.nu" "$cfg_path"
 fi
 
 # only set up zgenon if zsh is available
 if command -v zsh; then
-  if [ ! -d "$HOME/.zgenom" ] || [ ! -f "$HOME/.zgenom/.git" ]; then
+  if [ ! -d "$HOME/.zgenom" ] || [ ! -d "$HOME/.zgenom/.git" ]; then
+    echo "Configuring zgenom"
     mkdir -p $HOME/.zgenom
     cd $HOME/.zgenom
     git clone https://github.com/jandamm/zgenom.git .
@@ -33,9 +38,9 @@ if command -v zsh; then
 fi
 
 if [ "$system_type" = "Darwin" ]; then
-
+  echo "Configuring macOS"
   # install homebrew if it's missing
-  if ! command -v brew >/dev/null 2>&1; then
+  if ! command -v brew > /dev/null 2>&1; then
     echo "Installing homebrew"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
