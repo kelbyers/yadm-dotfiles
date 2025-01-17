@@ -25,8 +25,6 @@ $env.config.buffer_editor = "code"
 $env.STARSHIP_CONFIG = "~/.config/starship.toml"
 
 use ~/.config/nushell/starship.nu
-use ~/.config/nushell/cal3.nu
-use ~/.config/nushell/cf.nu *
 use ~/.config/nushell/git.nu *
 source ~/.config/nushell/direnv.nu
 source ~/.config/nushell/carapace.nu

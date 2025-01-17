@@ -1,3 +1,4 @@
 # code: language=nushell
 
 use ~/.config/nushell/brew.nu
+use ~/.config/nushell/cf.nu *
