@@ -19,6 +19,8 @@
 
 # $env.config.buffer_editor = "notepad++"
 
+source ~/.config/nushell/config-local.nu
+
 $env.config.buffer_editor = "code"
 $env.STARSHIP_CONFIG = "~/.config/starship.toml"
 

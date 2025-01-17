@@ -23,6 +23,8 @@ export alias gco = git checkout
 
 export alias gd = git diff
 
+export alias gdtl = git difftool
+
 export alias gf = git fetch
 export alias gfa = git fetch --all
 
