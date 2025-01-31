@@ -1,3 +1,4 @@
+# code: language=shellscript
 # set up rancher desktop
 _RD=$HOME/.rd
 _RDBIN=$_RD/bin

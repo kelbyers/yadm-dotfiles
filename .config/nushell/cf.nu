@@ -57,15 +57,31 @@ def configs [] {
     }
 }
 
-# def upsert-config [config: string@configs]
+export def --wrapped "cf-in" [config, ...rest] {
+    cf-set-config $config
+    print $"Using config: ($config)"
+    cf ...$rest
+}
 
-export def --env "cf set-config" [config: string@configs] {
+export alias cfat = cf-in "at"
+export alias cfat2 = cf-in "at2"
+export alias cfat3 = cf-in "at3"
+export alias cfnp = cf-in "np"
+export alias cfeb = cf-in "eb"
+export alias cfza = cf-in "za"
+export alias cfzb = cf-in "zb"
+
+def --env cf-set-config [config] {
     if (cf-configs-exists $config) == false {
         mkdir ([$env.CF_CONFIGS_DIR $config] | path join)
     }
 
     $env.CF_HOME = ([$env.CF_CONFIGS_DIR $config] | path join)
     $env.CF_PLUGIN_HOME = ([$env.CF_CONFIGS_DIR '..' 'plugins'] | path join | path expand)
+}
+
+export def --env "cf set-config" [config: string@configs] {
+    cf-set-config $config
 }
 
 export def "cf get-config" [] {
@@ -110,4 +126,11 @@ export def --env "cf delete-config" [config: string@configs] {
     if ((cf get-config) == $config) {
         cf hide-config
     }
+}
+
+export def --wrapped "cf relogin" [...rest] {
+    let config = (open ([$env.CF_HOME ".cf" "config.json"] | path join))
+    let space = $config.SpaceFields.Name
+    let org = $config.OrganizationFields.Name
+    cf login -s $space -o $org ...$rest
 }
