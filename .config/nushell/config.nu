@@ -28,6 +28,7 @@ use ~/.config/nushell/cal3.nu *
 use ~/.config/nushell/clipboard.nu *
 use ~/.config/nushell/git.nu *
 use ~/.config/nushell/starship.nu
+use ~/.config/nushell/alias.nu *
 
 source ~/.config/nushell/carapace.nu
 source ~/.config/nushell/direnv.nu
