@@ -2,3 +2,6 @@
 
 use ~/.config/nushell/brew.nu
 use ~/.config/nushell/cf.nu *
+
+$env.ASDF_DIR = ($env.HOME | path join '.asdf')
+source /Users/jxb2016/.asdf/asdf.nu

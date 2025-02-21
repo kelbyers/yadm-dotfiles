@@ -99,17 +99,43 @@ def configs [] {
     }
 }
 
-def --env cf-set-config [config] {
+def cf-get-config-home [config] {
+    ([$env.CF_CONFIGS_DIR $config] | path join)
+}
+
+def cf-get-config-plugin-home [config] {
+    ([$env.CF_CONFIGS_DIR '..' 'plugins'] | path join | path expand)
+}
+
+def cf-ensure-config-exists [config] {
     if (cf-configs-exists $config) == false {
         mkdir ([$env.CF_CONFIGS_DIR $config] | path join)
     }
+}
 
-    $env.CF_HOME = ([$env.CF_CONFIGS_DIR $config] | path join)
-    $env.CF_PLUGIN_HOME = ([$env.CF_CONFIGS_DIR '..' 'plugins'] | path join | path expand)
+def --env cf-set-config [config] {
+    cf-ensure-config-exists $config
+
+    $env.CF_HOME = (cf-get-config-home $config)
+    $env.CF_PLUGIN_HOME = (cf-get-config-plugin-home $config)
+}
+
+export def --env "cf create-config" [config] {
+    if (cf-configs-exists $config) {
+        return
+    }
+    mkdir ([$env.CF_CONFIGS_DIR $config] | path join)
+    cf-set-config $config
 }
 
 export def --env "cf set-config" [config: string@configs] {
     cf-set-config $config
+}
+
+export def "cf export-config-zsh" [config: string@configs] {
+    cf-configs-exists $config
+    print $"export CF_HOME=(cf-get-config-home $config)"
+    print $"export CF_PLUGIN_HOME=(cf-get-config-plugin-home $config)"
 }
 
 export def "cf get-config" [] {
