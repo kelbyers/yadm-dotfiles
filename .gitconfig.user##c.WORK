@@ -1,4 +1,6 @@
 # vim: ft=gitconfig
+[commit]
+	template = ~/.stCommitMsg
 [user]
 	name = Kel Byers
 	email = kel_byers@homedepot.com

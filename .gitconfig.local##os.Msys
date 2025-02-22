@@ -1,0 +1,17 @@
+# vim: ft=gitconfig
+
+[core]
+	autocrlf = true
+	symlinks = true
+[credential]
+	helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+# [difftool "sourcetree"]
+# 	cmd = '' \"$LOCAL\" \"$REMOTE\"
+# [mergetool "sourcetree"]
+# 	cmd = "'' "
+# 	trustExitCode = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
