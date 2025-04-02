@@ -44,8 +44,6 @@ if ! zgenom saved; then
     zgenom oh-my-zsh plugins/copyfile
     zgenom oh-my-zsh plugins/copypath
     zgenom oh-my-zsh plugins/direnv
-    zgenom oh-my-zsh plugins/dirhistory
-    zgenom oh-my-zsh plugins/dirpersist
     zgenom oh-my-zsh plugins/git
     zgenom oh-my-zsh plugins/git-auto-fetch
     zgenom oh-my-zsh plugins/golang
@@ -62,7 +60,6 @@ if ! zgenom saved; then
     zgenom oh-my-zsh plugins/z
 
     zgenom load baliestri/pnpm.plugin.zsh
-    zgenom load dannyzen/cf-zsh-autocomplete-plugin
     zgenom load mfaerevaag/wd
     zgenom load unixorn/fzf-zsh-plugin
     zgenom load zsh-users/zsh-autosuggestions
