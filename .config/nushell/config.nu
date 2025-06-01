@@ -24,11 +24,12 @@ source ~/.config/nushell/config-local.nu
 $env.config.buffer_editor = "code"
 $env.STARSHIP_CONFIG = "~/.config/starship.toml"
 
+use ~/.config/nushell/alias.nu *
 use ~/.config/nushell/cal3.nu *
 use ~/.config/nushell/clipboard.nu *
 use ~/.config/nushell/git.nu *
+use ~/.config/nushell/neovim.nu *
 use ~/.config/nushell/starship.nu
-use ~/.config/nushell/alias.nu *
 
 source ~/.config/nushell/carapace.nu
 source ~/.config/nushell/direnv.nu

@@ -12,5 +12,5 @@ export def --wrapped neovim-kickstart [...rest] {
     neovim-start kickstart.nvim ...$rest
 }
 
-alias vl = neovim-lazy
-alias vk = neovim-kickstart
+export alias vl = neovim-lazy
+export alias vk = neovim-kickstart
