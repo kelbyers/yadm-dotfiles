@@ -50,6 +50,14 @@ def make-args [flag value] {
 #     ...rest
 # ] {
 #     let args = (
+export-env {
+    # check if nvim in path
+    if ((which nvim | length) > 0 ) {
+       # This will make the default be kickstart
+       $env.NVIM_APPNAME=kickstart.nvim
+    }
+}
+
 #         [
 #             (make-args "-a" $API_endpoint)
 #             (make-args "-u" $username)
