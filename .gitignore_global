@@ -8,6 +8,10 @@
 .tool-versions
 /tmp
 
+### blue-green ###
+running-apps.txt
+stopped-apps.txt
+
 ### VisualStudioCode ###
 .vscode/*
 # !.vscode/settings.json

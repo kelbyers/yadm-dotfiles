@@ -1,19 +1,23 @@
 # vim: ft=gitconfig
 [difftool "sourcetree"]
-	cmd = /opt/homebrew/bin/bcomp \"$LOCAL\" \"$REMOTE\"
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\"
 	path = -ro
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+	cmd = /usr/local/bin/bcomp \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 	trustExitCode = true
 [diff]
 	tool = bc
+	cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = bc
 [mergetool "bc"]
 	trustExitCode = true
+	cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
 [credential]
 	helper = osxkeychain
 [credentials]
 	helper = osxkeychain
 [git-town]
-	push-new-branches = true
+	share-new-branches = push
+[bulkworkspaces]
+	dope = /Users/jxb2016/git/one-thd/pcf_support
