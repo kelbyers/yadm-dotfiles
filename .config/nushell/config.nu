@@ -30,6 +30,7 @@ use ~/.config/nushell/clipboard.nu *
 use ~/.config/nushell/git.nu *
 use ~/.config/nushell/neovim.nu *
 use ~/.config/nushell/starship.nu
+use ~/.config/nushell/uv.nu
 
 source ~/.config/nushell/carapace.nu
 source ~/.config/nushell/direnv.nu
