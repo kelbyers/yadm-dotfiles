@@ -19,3 +19,6 @@ stopped-apps.txt
 # !.vscode/launch.json
 !.vscode/extensions.json
 # !.vscode/*.code-snippets
+
+### bats runtime stuff
+.bats
